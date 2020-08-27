@@ -19,44 +19,55 @@ class _MainPageState extends State<MainPage> {
             Expanded(
               child: Row(
                 children: <Widget>[
-                  Layout(),
+                  Expanded(
+                    child: Layout(),
+                  ),
                   SizedBox(
                     width: 10.0,
                   ),
-                  Layout(),
+                  Expanded(
+                    child: Layout(),
+                  ),
                 ],
               ),
             ),
-            Layout(),
+            Expanded(
+              child: Layout(),
+            ),
             Expanded(
               child: Row(
                 children: <Widget>[
-                  Layout(),
+                  Expanded(
+                    child: Layout(),
+                  ),
                   SizedBox(
                     width: 10.0,
                   ),
-                  Layout(),
+                  Expanded(
+                    child: Layout(),
+                  ),
                 ],
               ),
             ),
-           Expanded(
-             child: Container(
-               width: double.infinity,
-               child: Center(
-                 child: Text("Calculate",
-                 style: TextStyle(
-                   fontStyle: FontStyle.italic,
-                   fontSize: 40.0,
-                   color: Colors.white,
-                 ),),
-               ),
-             margin: const EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                 color: Colors.pinkAccent,
-                  borderRadius: BorderRadius.circular(20.0),
-               ),
+            FlatButton(
+              child: Container(
+                margin: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text("Calculate",
+                  style: TextStyle(
+                    fontSize: 40.0,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.white,
+                  ),),
+                ),
+                width:double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.pinkAccent,
+                  borderRadius: BorderRadius.circular(40.0),
+                ),
+              ),
             ),
-          ),
           ],
         ),
       ),
@@ -71,14 +82,13 @@ class Layout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        margin: const EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-          color: Colors.white54,
-          borderRadius: BorderRadius.circular(20.0),
-        ),
+    return Container(
+      margin: const EdgeInsets.all(10.0),
+      decoration: BoxDecoration(
+        color: Colors.white54,
+        borderRadius: BorderRadius.circular(30.0),
       ),
-    );
+                  );
   }
 }
+
