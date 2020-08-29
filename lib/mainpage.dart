@@ -304,6 +304,10 @@ class _MainPageState extends State<MainPage> {
                   borderRadius: BorderRadius.circular(40.0),
                 ),
               ),
+              onPressed: ()
+              {
+                Navigator.pushNamed(context,"/result");
+              },
             ),
           ],
         ),
